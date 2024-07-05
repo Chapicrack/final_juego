@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">trabajo_final</string>
+    <string name="Perfil">perfil</string>
+    <string name="Gastos">Gastos</string>
+    <string name="Ahorros">Ahorros</string>
+    <string name="Graficos">graficos</string>
+    <string name="GASTOS">gastos</string>
+    <string name="ingresos">ingresos</string>
+    <string name="Transporte">transporte</string>
+    <string name="Comida">comida</string>
+    <string name="Trabajos">trabajos</string>
+    <string name="ocio">ocio</string>
+    <string name="salidas">salidas</string>
+    <string name="snacks">snacks</string>
+
+
+
+
 </resources>

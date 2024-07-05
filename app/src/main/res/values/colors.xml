@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="grisHumo">#F4F4F4</color>
+    <color name="celesteClaro">#EBF6FC</color>
+    <color name="Moraditobtn">#B968BE</color>
+    <color name="Moraditobtningresos">#D597D8</color>
+    <color name="MoraditoOscuro">#440647</color>
 </resources>

@@ -5,15 +5,140 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/celesteClaro"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/gastos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/Gastos"
+        android:layout_marginTop="50dp"
+        android:textAllCaps="true"
+        android:textSize="30dp"
+        android:textColor="@color/MoraditoOscuro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGastos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Moraditobtn"
+        android:text="@string/Gastos"
+        android:textColor="@color/MoraditoOscuro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAhorros"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnAhorros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Moraditobtn"
+        android:text="@string/Ahorros"
+        android:textColor="@color/MoraditoOscuro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnGrafico"
+        app:layout_constraintStart_toEndOf="@+id/btnGastos" />
+
+    <Button
+        android:id="@+id/btnGrafico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Moraditobtn"
+        android:text="@string/Graficos"
+        android:textColor="@color/MoraditoOscuro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnPerfil"
+        app:layout_constraintStart_toEndOf="@+id/btnAhorros" />
+
+    <Button
+        android:id="@+id/btnPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Moraditobtn"
+        android:text="@string/Perfil"
+        android:textColor="@color/MoraditoOscuro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGrafico" />
+
+    <Button
+        android:id="@+id/btningresos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Moraditobtningresos"
+        android:textColor="@color/MoraditoOscuro"
+        android:text="@string/ingresos"
+        android:layout_marginTop="50dp"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gastos" />
+
+    <Button
+        android:id="@+id/btnTransporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Transporte"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnComida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btningresos" />
+
+    <Button
+        android:id="@+id/btnComida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Comida"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@id/btnTrabajos"
+        app:layout_constraintStart_toEndOf="@+id/btnTransporte"
+        app:layout_constraintTop_toBottomOf="@+id/btningresos" />
+
+    <Button
+        android:id="@+id/btnTrabajos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="trabajos"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnComida"
+        app:layout_constraintTop_toBottomOf="@+id/btningresos" />
+
+    <Button
+        android:id="@+id/btnSuscripciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ocio"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnSalidas"
+        app:layout_constraintTop_toBottomOf="@+id/btnTransporte" />
+
+    <Button
+        android:id="@+id/btnSalidas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salidas"
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnComida"
+        app:layout_constraintStart_toEndOf="@id/btnSuscripciones"
+        app:layout_constraintEnd_toStartOf="@+id/btnSnacks"
+        tools:layout_editor_absoluteX="165dp" />
+
+    <Button
+        android:id="@+id/btnSnacks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/snacks"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnSalidas"
+        app:layout_constraintTop_toBottomOf="@+id/btnTrabajos" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
