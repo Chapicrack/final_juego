@@ -12,11 +12,18 @@
     <string name="ocio">ocio</string>
     <string name="salidas">salidas</string>
     <string name="snacks">snacks</string>
-    <string name="deuda">deudas</string>
+    <string name="deuda">deudas y prestamos</string>
     <string name="prestamos">prestamos</string>
     <string name="totalGastos">TOTAL  :</string>
-
-
+    <string name="calculadora">calculadora  :</string>
+    <string name="graficos">graficos  :</string>
+    <string name="perfil">perfil  :</string>
+    <string name="ahorros">ahorros  :</string>
+    <string name="save">Guardar  :</string>
+    <string name="recibir">ingrese su imformacion del producto  :</string>
+    <string name="recibirprecio">ingrese el precio del producto  :</string>
+    <string name="recibircantidad">ingresa cantidad  :</string>
+    <string name="eliminar">eliminar :</string>
 
 
 

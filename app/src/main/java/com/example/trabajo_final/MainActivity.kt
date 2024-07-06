@@ -1,11 +1,16 @@
 package com.example.trabajo_final
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
+import androidx.navigation.fragment.findNavController
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.findNavController
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +32,39 @@ class MainActivity : AppCompatActivity() {
         val btnUtilidad = findViewById<Button>(R.id.btnUtilidad)
         val btnExtras = findViewById<Button>(R.id.btnExtras)
         val btnDeudas = findViewById<Button>(R.id.btnDeudas)
-        val btnPrestamos = findViewById<Button>(R.id.btnPrestamos)
 
 
+        btnTransporte.setOnClickListener{navigatorCalculadora() }
+        btnComida.setOnClickListener { navigatorCalculadora() }
+        btnTrabajos.setOnClickListener { navigatorCalculadora() }
+        btnSuscripciones.setOnClickListener { navigatorCalculadora() }
+        btnSalidas.setOnClickListener { navigatorCalculadora() }
+        btnSnacks.setOnClickListener { navigatorCalculadora() }
+        btnAccesorios.setOnClickListener { navigatorCalculadora() }
+        btnUtilidad.setOnClickListener { navigatorCalculadora() }
+        btnExtras.setOnClickListener { navigatorCalculadora() }
+        btnAhorros.setOnClickListener{navigatorAhorros()}
+        btnGrafico.setOnClickListener{navigatorGraficos()}
+        btnPerfil.setOnClickListener{navigatorPerfil()}
+
+
+
+        }
+        private fun navigatorCalculadora() {
+            val intent = Intent(this,activityCalculadora::class.java)
+            startActivity(intent)
     }
+    private fun navigatorAhorros() {
+        val intent = Intent(this,AhorrosActivity::class.java)
+        startActivity(intent)
+    }
+    private fun navigatorGraficos() {
+        val intent = Intent(this,GraficosActivity::class.java)
+        startActivity(intent)
+    }
+    private fun navigatorPerfil() {
+        val intent = Intent(this,PerfilActivity::class.java)
+        startActivity(intent)
+    }
+
 }
