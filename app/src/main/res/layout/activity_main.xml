@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/celesteClaro"
+    android:background="@color/rosadofondo"
     tools:context=".MainActivity">
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_marginTop="50dp"
         android:textAllCaps="true"
         android:textSize="30dp"
-        android:textColor="@color/MoraditoOscuro"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,53 +25,56 @@
         android:id="@+id/btnGastos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/Moraditobtn"
+        android:backgroundTint="@color/rosadobotones"
         android:text="@string/Gastos"
-        android:textColor="@color/MoraditoOscuro"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnAhorros"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        android:layout_marginBottom="50dp" />
 
     <Button
         android:id="@+id/btnAhorros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/Moraditobtn"
+        android:backgroundTint="@color/rosadobotones"
         android:text="@string/Ahorros"
-        android:textColor="@color/MoraditoOscuro"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnGrafico"
-        app:layout_constraintStart_toEndOf="@+id/btnGastos" />
+        app:layout_constraintStart_toEndOf="@+id/btnGastos"
+        android:layout_marginBottom="50dp" />
 
     <Button
         android:id="@+id/btnGrafico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/Moraditobtn"
+        android:backgroundTint="@color/rosadobotones"
         android:text="@string/Graficos"
-        android:textColor="@color/MoraditoOscuro"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnPerfil"
-        app:layout_constraintStart_toEndOf="@+id/btnAhorros" />
+        app:layout_constraintStart_toEndOf="@+id/btnAhorros"
+        android:layout_marginBottom="50dp" />
 
     <Button
         android:id="@+id/btnPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/Moraditobtn"
+        android:backgroundTint="@color/rosadobotones"
         android:text="@string/Perfil"
-        android:textColor="@color/MoraditoOscuro"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnGrafico" />
+        app:layout_constraintStart_toEndOf="@+id/btnGrafico"
+        android:layout_marginBottom="50dp" />
 
     <Button
         android:id="@+id/btningresos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/Moraditobtningresos"
-        android:textColor="@color/MoraditoOscuro"
+        android:backgroundTint="@color/rosadobotones"
+        android:textColor="@color/black"
         android:text="@string/ingresos"
         android:layout_marginTop="50dp"
         android:textAllCaps="true"
@@ -81,64 +84,147 @@
 
     <Button
         android:id="@+id/btnTransporte"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/Transporte"
         android:layout_marginTop="30dp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/btnComida"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btningresos" />
+        app:layout_constraintTop_toBottomOf="@+id/btningresos"
+        android:backgroundTint="@color/rosadobotones" />
 
     <Button
         android:id="@+id/btnComida"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/Comida"
+        android:textColor="@color/black"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toStartOf="@id/btnTrabajos"
         app:layout_constraintStart_toEndOf="@+id/btnTransporte"
-        app:layout_constraintTop_toBottomOf="@+id/btningresos" />
+        app:layout_constraintTop_toBottomOf="@+id/btningresos"
+        android:backgroundTint="@color/rosadobotones" />
 
     <Button
         android:id="@+id/btnTrabajos"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="trabajos"
         android:layout_marginTop="30dp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btnComida"
-        app:layout_constraintTop_toBottomOf="@+id/btningresos" />
+        app:layout_constraintTop_toBottomOf="@+id/btningresos"
+        android:backgroundTint="@color/rosadobotones" />
 
     <Button
         android:id="@+id/btnSuscripciones"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/ocio"
         android:layout_marginTop="35dp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnSalidas"
-        app:layout_constraintTop_toBottomOf="@+id/btnTransporte" />
+        app:layout_constraintTop_toBottomOf="@+id/btnTransporte"
+        android:backgroundTint="@color/rosadobotones" />
 
     <Button
         android:id="@+id/btnSalidas"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/salidas"
         android:layout_marginTop="35dp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/btnComida"
         app:layout_constraintStart_toEndOf="@id/btnSuscripciones"
         app:layout_constraintEnd_toStartOf="@+id/btnSnacks"
-        tools:layout_editor_absoluteX="165dp" />
+        tools:layout_editor_absoluteX="165dp"
+        android:backgroundTint="@color/rosadobotones" />
 
     <Button
         android:id="@+id/btnSnacks"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/snacks"
         android:layout_marginTop="35dp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btnSalidas"
-        app:layout_constraintTop_toBottomOf="@+id/btnTrabajos" />
+        app:layout_constraintTop_toBottomOf="@+id/btnTrabajos"
+        android:backgroundTint="@color/rosadobotones" />
 
+    <Button
+        android:id="@+id/btnAccesorios"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Accesorios"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnUtilidad"
+        app:layout_constraintTop_toBottomOf="@+id/btnSalidas"
+        android:backgroundTint="@color/rosadobotones" />
+
+    <Button
+        android:id="@+id/btnUtilidad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Utilidad"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/btnAccesorios"
+        app:layout_constraintEnd_toStartOf="@id/btnExtras"
+        app:layout_constraintTop_toBottomOf="@+id/btnSalidas"
+        android:backgroundTint="@color/rosadobotones" />
+
+    <Button
+        android:id="@+id/btnExtras"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Extras"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/btnUtilidad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSalidas"
+        android:backgroundTint="@color/rosadobotones" />
+
+    <Button
+        android:id="@+id/btnDeudas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:backgroundTint="@color/rosadobotones"
+        android:text="@string/deuda"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/btnPrestamos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUtilidad" />
+
+    <Button
+        android:id="@+id/btnPrestamos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/rosadobotones"
+        android:text="@string/prestamos"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/btnDeudas"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/btnUtilidad" />
+
+    <TextView
+        android:id="@+id/totalGastos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="30dp"
+        android:text="@string/totalGastos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDeudas" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
