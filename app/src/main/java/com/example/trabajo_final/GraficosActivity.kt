@@ -4,7 +4,6 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
-import android.widget.SeekBar
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,8 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 class GraficosActivity : AppCompatActivity() {
 
     private lateinit var sharedPref: SharedPreferences
-    private lateinit var seekBarGastos: SeekBar
-    private lateinit var textViewTotalGastos: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,23 +19,6 @@ class GraficosActivity : AppCompatActivity() {
 
         // Initialize SharedPreferences
         sharedPref = getSharedPreferences("com.example.trabajo_final.PREFERENCE_FILE_KEY", MODE_PRIVATE)
-
-        // Initialize views
-        seekBarGastos = findViewById(R.id.seekBarGastos)
-        textViewTotalGastos = findViewById(R.id.textViewTotalGastos)
-
-        // Set up SeekBar listener
-        seekBarGastos.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                // Calculate total gastos based on SeekBar progress
-                val totalGastos = progress.toDouble() / 10 // Ejemplo: Dividir por 10 para ajustar valor
-                textViewTotalGastos.text = "Total de Gastos: \$$totalGastos"
-            }
-
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
-
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
-        })
 
         // Find buttons in the layout
         val btnGastos = findViewById<Button>(R.id.btnGastos)
