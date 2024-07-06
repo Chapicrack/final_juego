@@ -1,0 +1,33 @@
+# Gastos Hormigas
+
+## Descripción del Proyecto
+"Gastos Hormigas" es una aplicación móvil diseñada para ayudar a los usuarios a gestionar y controlar sus gastos diarios de manera efectiva. Esta herramienta nació de la necesidad de proporcionar a mi pareja una forma práctica de monitorear sus gastos sin complicaciones, permitiéndome también adaptar y mejorar la aplicación a largo plazo según nuestras necesidades cambiantes.
+
+## Características Principales
+- **Registro de Gastos:** Permite registrar nombres, cantidades y precios de los gastos.
+- **Visualización de Datos:** Muestra un resumen claro de los gastos registrados.
+- **Modificación del Código:** La aplicación está diseñada para ser fácilmente modificable, permitiendo ajustes y mejoras continuas.
+- **Interfaz Amigable:** Diseño intuitivo para una experiencia de usuario fluida y accesible.
+
+## Instrucciones de Instalación y Uso
+1. **Clonar el Repositorio:**
+2. **Abrir el Proyecto:**
+- Abre Android Studio.
+- Importa el proyecto clonado.
+
+3. **Configuración del Dispositivo:**
+- Configura tu dispositivo Android para la depuración USB.
+
+4. **Ejecutar la Aplicación:**
+- Ejecuta la aplicación en tu dispositivo o emulador desde Android Studio.
+
+5. **Uso:**
+- Abre la aplicación "Gastos Hormigas" en tu dispositivo Android.
+- Registra tus gastos diarios utilizando el formulario proporcionado.
+- Visualiza tus gastos en la sección correspondiente.
+
+## Licencia
+Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
+
+## Contacto
+Para cualquier consulta o sugerencia, contáctame a través de [correo electrónico](mailto:tu_correo@example.com).
