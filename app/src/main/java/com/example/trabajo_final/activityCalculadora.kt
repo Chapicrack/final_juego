@@ -15,19 +15,18 @@ class activityCalculadora : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_calculadorta)
 
+        val recibirNombre = findViewById<EditText>(R.id.recibirnombre)
+        val recibirCantidad = findViewById<EditText>(R.id.recibircantidad)
+        val recibirPrecio = findViewById<EditText>(R.id.recibirprecio)
+
         val btnGastos = findViewById<Button>(R.id.btnGastos)
         val btnAhorros = findViewById<Button>(R.id.btnAhorros)
         val btnGrafico = findViewById<Button>(R.id.btnGrafico)
         val btnPerfil = findViewById<Button>(R.id.btnPerfil)
-
-        val recibirNombre = findViewById<EditText>(R.id.recibirnombre)
-        val recibirCantidad = findViewById<EditText>(R.id.recibircantidad)
-        val recibirPrecio = findViewById<EditText>(R.id.recibirprecio)
         val btnSave = findViewById<Button>(R.id.btnSave)
+        val btnEliminar = findViewById<Button>(R.id.btneliminar)
 
         btnGastos.setOnClickListener { navigatormainactivity() }
-        btnAhorros.setOnClickListener { navigatorAhorros() }
-        btnGrafico.setOnClickListener { navigatorGraficos() }
         btnPerfil.setOnClickListener { navigatorPerfil() }
 
         btnSave.setOnClickListener {
@@ -41,6 +40,17 @@ class activityCalculadora : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        btnEliminar.setOnClickListener {
+            recibirNombre.text.clear()
+            recibirCantidad.text.clear()
+            recibirPrecio.text.clear()
+            Toast.makeText(this, "Campos eliminados", Toast.LENGTH_SHORT).show()
+        }
+
+        btnGrafico.setOnClickListener {
+            navigatorGraficos()
         }
     }
 
@@ -56,11 +66,6 @@ class activityCalculadora : AppCompatActivity() {
 
     private fun navigatormainactivity() {
         val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
-
-    private fun navigatorAhorros() {
-        val intent = Intent(this, AhorrosActivity::class.java)
         startActivity(intent)
     }
 

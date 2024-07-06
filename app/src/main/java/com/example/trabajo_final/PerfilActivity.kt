@@ -14,22 +14,16 @@ class PerfilActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_perfil)
         val btnGastos = findViewById<Button>(R.id.btnGastos)
-        val btnAhorros = findViewById<Button>(R.id.btnAhorros)
         val btnGrafico = findViewById<Button>(R.id.btnGrafico)
         val btnPerfil = findViewById<Button>(R.id.btnPerfil)
 
         btnGastos.setOnClickListener{navigatormainactivity() }
-        btnAhorros.setOnClickListener{navigatorAhorros() }
         btnGrafico.setOnClickListener{navigatorGraficos() }
         btnPerfil.setOnClickListener{navigatorPerfil() }
 
     }
     private fun navigatormainactivity() {
         val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
-    private fun navigatorAhorros() {
-        val intent = Intent(this,AhorrosActivity::class.java)
         startActivity(intent)
     }
     private fun navigatorGraficos() {

@@ -29,21 +29,11 @@
         android:text="@string/Gastos"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAhorros"
+        app:layout_constraintEnd_toStartOf="@+id/btnGrafico"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="50dp" />
 
-    <Button
-        android:id="@+id/btnAhorros"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/rosadobotones"
-        android:text="@string/Ahorros"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnGrafico"
-        app:layout_constraintStart_toEndOf="@+id/btnGastos"
-        android:layout_marginBottom="50dp" />
+
 
     <Button
         android:id="@+id/btnGrafico"
@@ -54,7 +44,7 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnPerfil"
-        app:layout_constraintStart_toEndOf="@+id/btnAhorros"
+        app:layout_constraintStart_toEndOf="@+id/btnGastos"
         android:layout_marginBottom="50dp" />
 
     <Button

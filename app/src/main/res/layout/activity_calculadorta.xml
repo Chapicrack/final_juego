@@ -22,17 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <Button
-        android:id="@+id/btnGastos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/rosadobotones"
-        android:text="@string/Gastos"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAhorros"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="50dp" />
+
     <EditText
         android:id="@+id/recibirnombre"
         android:layout_width="0dp"
@@ -41,6 +31,7 @@
         android:padding="16dp"
         android:background="@color/white"
         android:textColor="@color/black"
+        android:inputType="text"
         app:layout_constraintTop_toBottomOf="@id/textCalculadora"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,6 +48,7 @@
         android:padding="16dp"
         android:background="@color/white"
         android:textColor="@color/black"
+        android:inputType="number"
         app:layout_constraintTop_toBottomOf="@id/recibirnombre"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,6 +57,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"/>
+
     <EditText
         android:id="@+id/recibirprecio"
         android:layout_width="0dp"
@@ -73,6 +66,7 @@
         android:padding="16dp"
         android:background="@color/white"
         android:textColor="@color/black"
+        android:inputType="numberDecimal"
         app:layout_constraintTop_toBottomOf="@id/recibircantidad"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,20 +85,23 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/btnAhorros"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
         app:layout_constraintStart_toEndOf="@+id/btneliminar"
         app:layout_constraintTop_toBottomOf="@+id/recibirprecio" />
 
     <Button
-        android:id="@+id/btnAhorros"
+        android:id="@+id/btnGastos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/rosadobotones"
-        android:text="@string/Ahorros"
+        android:text="@string/Gastos"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnGrafico"
-        app:layout_constraintStart_toEndOf="@+id/btnGastos"
+        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="50dp" />
+
+
 
     <Button
         android:id="@+id/btnGrafico"
@@ -115,7 +112,7 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnPerfil"
-        app:layout_constraintStart_toEndOf="@+id/btnAhorros"
+        app:layout_constraintStart_toEndOf="@+id/btnGastos"
         android:layout_marginBottom="50dp" />
 
     <Button
