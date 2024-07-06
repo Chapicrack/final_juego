@@ -59,6 +59,7 @@
         app:layout_constraintStart_toEndOf="@+id/btnGrafico"
         android:layout_marginBottom="50dp" />
 
+
     <Button
         android:id="@+id/btningresos"
         android:layout_width="wrap_content"
@@ -181,29 +182,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnSalidas"
         android:backgroundTint="@color/rosadobotones" />
 
-    <Button
-        android:id="@+id/btnDeudas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:backgroundTint="@color/rosadobotones"
-        android:text="@string/deuda"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnUtilidad" />
 
-
-    <TextView
-        android:id="@+id/totalGastos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:textSize="30dp"
-        android:text="@string/totalGastos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDeudas" />
 
 
 

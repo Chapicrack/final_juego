@@ -8,37 +8,26 @@
     android:background="@color/rosadofondo"
     tools:context=".GraficosActivity">
 
-    <TextView
-        android:id="@+id/textViewNombre"
-        android:layout_width="wrap_content"
+    <!-- Spinner para mostrar las entradas guardadas -->
+    <Spinner
+        android:id="@+id/spinnerEntries"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Nombre:"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
+        android:layout_marginTop="50dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="50dp" />
-
-    <TextView
-        android:id="@+id/textViewCantidad"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <Button
+        android:id="@+id/btnEliminarEntradas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cantidad:"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNombre"
+        android:text="Eliminar Todas las Entradas"
+        android:backgroundTint="@color/rosadobotones"
+        android:textColor="@color/black"
+        android:onClick="eliminarEntradas"
+        app:layout_constraintTop_toBottomOf="@id/spinnerEntries"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp" />
-
-    <TextView
-        android:id="@+id/textViewPrecio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Precio:"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCantidad"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
     <!-- Botones de navegación -->
@@ -77,35 +66,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnGrafico"
         android:layout_marginBottom="50dp" />
-
-    <!-- Layout para mostrar los gastos -->
-    <LinearLayout
-        android:id="@+id/llGastosContainer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/textViewPrecio"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="16dp">
-
-        <!-- Barra para mostrar los gastos -->
-        <SeekBar
-            android:id="@+id/seekBarGastos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="1000"
-            android:progress="0" />
-
-        <!-- Texto para mostrar el total de gastos -->
-        <TextView
-            android:id="@+id/textViewTotalGastos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Total de Gastos: $0.00"
-            android:textSize="18sp"
-            android:textColor="@android:color/black"
-            android:layout_marginTop="16dp" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

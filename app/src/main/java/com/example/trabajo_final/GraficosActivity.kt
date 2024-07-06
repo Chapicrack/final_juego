@@ -3,58 +3,57 @@ package com.example.trabajo_final
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.TextView
+import android.widget.Spinner
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
 class GraficosActivity : AppCompatActivity() {
 
     private lateinit var sharedPref: SharedPreferences
+    private lateinit var spinner: Spinner
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_graficos2)
 
-        // Initialize SharedPreferences
+        // Inicializar SharedPreferences para acceder a los datos guardados
         sharedPref = getSharedPreferences("com.example.trabajo_final.PREFERENCE_FILE_KEY", MODE_PRIVATE)
 
-        // Find buttons in the layout
+        // Encontrar botones y spinner en el layout
         val btnGastos = findViewById<Button>(R.id.btnGastos)
         val btnGrafico = findViewById<Button>(R.id.btnGrafico)
         val btnPerfil = findViewById<Button>(R.id.btnPerfil)
+        spinner = findViewById(R.id.spinnerEntries)
 
-        // Set click listeners for navigation buttons
-        btnGastos.setOnClickListener { navigatormainactivity() }
-        btnGrafico.setOnClickListener { navigatorGraficos() }
-        btnPerfil.setOnClickListener { navigatorPerfil() }
+        // Configurar listeners para los botones de navegación
+        btnGastos.setOnClickListener { navegarAMainActivity() }
+        btnGrafico.setOnClickListener { /* No es necesario navegar a la misma actividad */ }
+        btnPerfil.setOnClickListener { navegarAPerfilActivity() }
 
-        // Retrieve and display saved data
-        val savedNombre = sharedPref.getString("savedNombre", "")
-        val savedCantidad = sharedPref.getString("savedCantidad", "")
-        val savedPrecio = sharedPref.getString("savedPrecio", "")
+        // Recuperar y mostrar datos guardados
+        val entriesString = sharedPref.getString("entries", "")
+        val entries = if (entriesString.isNullOrEmpty()) listOf<Entry>() else entriesString.split("|").map { Entry.fromString(it) }
 
-        val tvNombre = findViewById<TextView>(R.id.textViewNombre)
-        val tvCantidad = findViewById<TextView>(R.id.textViewCantidad)
-        val tvPrecio = findViewById<TextView>(R.id.textViewPrecio)
+        // Crear una lista de cadenas para mostrar en el Spinner
+        val entryStrings = entries.map { "Nombre: ${it.nombre}, Cantidad: ${it.cantidad}, Precio: ${it.precio}" }
 
-        tvNombre.text = "Nombre: $savedNombre"
-        tvCantidad.text = "Cantidad: $savedCantidad"
-        tvPrecio.text = "Precio: $savedPrecio"
+        // Configurar el Spinner con el adaptador
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, entryStrings)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner.adapter = adapter
     }
 
-    private fun navigatormainactivity() {
+    private fun navegarAMainActivity() {
+        // Navegar a MainActivity
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 
-    private fun navigatorGraficos() {
-        val intent = Intent(this, GraficosActivity::class.java)
-        startActivity(intent)
-    }
-
-    private fun navigatorPerfil() {
+    private fun navegarAPerfilActivity() {
+        // Navegar a PerfilActivity
         val intent = Intent(this, PerfilActivity::class.java)
         startActivity(intent)
     }
