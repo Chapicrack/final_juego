@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -55,8 +54,6 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="50dp" />
 
-
-
     <Button
         android:id="@+id/btnGrafico"
         android:layout_width="wrap_content"
@@ -80,5 +77,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnGrafico"
         android:layout_marginBottom="50dp" />
+
+    <!-- Layout para mostrar los gastos -->
+    <LinearLayout
+        android:id="@+id/llGastosContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/textViewPrecio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp">
+
+        <!-- Barra para mostrar los gastos -->
+        <SeekBar
+            android:id="@+id/seekBarGastos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="1000"
+            android:progress="0" />
+
+        <!-- Texto para mostrar el total de gastos -->
+        <TextView
+            android:id="@+id/textViewTotalGastos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total de Gastos: $0.00"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

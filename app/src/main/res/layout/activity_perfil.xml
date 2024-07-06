@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/rosadofondo"
-    tools:context=".MainActivity">
+    tools:context=".PerfilActivity">
 
     <TextView
         android:id="@+id/textAhorros"
@@ -21,6 +22,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAhorros"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <EditText
+        android:id="@+id/editTextEdad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Edad"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombre"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxUniversitario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Universitario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEdad"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxTrabaja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trabaja"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxUniversitario"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxUniversitario"
+        android:layout_marginStart="16dp"/>
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxUniversitario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <!-- Botones de navegación -->
     <Button
         android:id="@+id/btnGastos"
         android:layout_width="wrap_content"
@@ -32,8 +91,6 @@
         app:layout_constraintEnd_toStartOf="@+id/btnGrafico"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="50dp" />
-
-
 
     <Button
         android:id="@+id/btnGrafico"
